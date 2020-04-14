@@ -1,0 +1,18 @@
+Front End:  https://www.youtube.com/watch?v=XuFDcZABiDQ
+
+7 min in - https://youtu.be/XuFDcZABiDQ?t=467
+
+14:18 in - https://youtu.be/XuFDcZABiDQ?t=869
+
+COMPLETE 4/10
+
+================================================================================================
+
+Back End: https://www.youtube.com/watch?v=KyWaXA_NvT0 
+
+
+
+
+
+Heroic build pack to help launch server
+https://elements.heroku.com/buildpacks/mars/create-react-app-buildpack
