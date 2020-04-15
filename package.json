@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "node Server.js",
+    "server": "nodemon Server.js",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -13,10 +13,14 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "colors": "^1.4.0",
-    "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongodb": "^3.5.6",
     "mongoose": "^5.9.9",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3"
   }
 }
