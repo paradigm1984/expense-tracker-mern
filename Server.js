@@ -10,7 +10,7 @@ const connectDB = require('./config/db')
 const transactions = require('./routes/transaction_routes');
 
 
-connectDB();
+// connectDB();
 
 // app.use(express.static(path.join(__dirname, 'client/build')));
 app.use('/api/transactions', transactions);
