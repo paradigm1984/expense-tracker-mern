@@ -16,3 +16,10 @@ https://youtu.be/KyWaXA_NvT0?t=1548 25 min in
 
 Heroic build pack to help launch server
 https://elements.heroku.com/buildpacks/mars/create-react-app-buildpack
+
+
+
+// ----- snippets i might need ------ //
+
+// from /client/package.json
+ "http://localhost:5000",
