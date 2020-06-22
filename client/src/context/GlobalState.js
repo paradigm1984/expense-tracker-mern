@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
+import axios from 'axios';
 
 
 // This file is used to track the state of the transactions, as that information
@@ -7,7 +8,9 @@ import AppReducer from './AppReducer';
 
 // Initial State with some dummy data
 const initialState = {
- transactions: []
+ transactions: [],
+ error: null,
+ loading: true
 }
 
 // Create Context using built in React function and passing in the initial state.
@@ -22,6 +25,24 @@ export const GlobalProvider = ({ children }) => {
  const [state, dispatch] = useReducer(AppReducer, initialState);
 
  // Actions
+
+ // Get all transactions from the database
+ async function getTransactions() {
+  try {
+   const res = await axios.get('/api/transactions');
+   dispatch({
+    type: 'GET_TRANSACTIONS',
+    payload: res.data.data
+   })
+  } catch (err) {
+   dispatch({
+    type: 'TRANSACTION_ERROR',
+    payload: err.response.data.error
+   })
+  }
+ }
+
+
  // Deletes a transaction state using the DELETE_TRANSACTION case in the AppReducer
  function deleteTransaction(id) {
   dispatch({
@@ -41,6 +62,9 @@ export const GlobalProvider = ({ children }) => {
  return (
   <GlobalContext.Provider value={{
    transactions: state.transactions,
+   error: state.error,
+   loading: state.loading,
+   getTransactions,
    deleteTransaction,
    addTransaction
   }}>
