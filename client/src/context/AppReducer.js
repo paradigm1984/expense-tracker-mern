@@ -9,25 +9,21 @@ export default (state, action) => {
         loading: false,
         transactions: action.payload
       }
-      break;
     case 'DELETE_TRANSACTION':
       return {
         ...state,
         transactions: state.transactions.filter(transaction => transaction._id !== action.payload)
       }
-      break;
     case 'ADD_TRANSACTION':
       return {
         ...state,
         transactions: [...state.transactions, action.payload]
       }
-      break;
     case 'TRANSACTION_ERROR':
       return {
         ...state,
         error: action.payload
       }
-      break;
   // default returns all transactions
   default:
    return state;
