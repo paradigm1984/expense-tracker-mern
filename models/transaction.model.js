@@ -1,30 +1,22 @@
 // transaction.model.js
 
-var mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-// Save a reference to the Schema constructor
-var Schema = mongoose.Schema;
-
-var transactionSchema = new Schema({
-    // `name` must be unique and of type String
+const TransactionSchema = new mongoose.Schema({
+    text: {
+        type: String,
+        trim: true,
+        required: [true, 'Please add some text']
+    },
     amount: {
         type: Number,
-        trim: true,
-        required: [true, 'Please add a description']
-    },
-    description: {
-         type: String,
-        required: [true, 'Please add a positive or negative amount']
+        required: [true, 'Please add a positive or negative number']
     },
     createdAt: {
-         type: Date,
-         default: Date.now
-    },
-},   {
-        timestamps: true,
-    });
+        type: Date,
+        default: Date.now
+    }
+});
 
-const Transaction = mongoose.model('Transaction', transactionSchema);
+module.exports = mongoose.model('Transaction', TransactionSchema);
 
-module.exports = Transaction;
-  

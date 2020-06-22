@@ -1,5 +1,4 @@
-// A Reducer is a pure function that takes the previous state and an action,
-// and returns the next state.
+// AppReducer.js
 
 export default (state, action) => {
   switch (action.type) {
@@ -24,8 +23,10 @@ export default (state, action) => {
         ...state,
         error: action.payload
       }
-  // default returns all transactions
-  default:
-   return state;
- }
+    default:
+      return state;
+  }
 }
+
+
+
