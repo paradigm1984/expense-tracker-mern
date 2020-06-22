@@ -44,11 +44,20 @@ export const GlobalProvider = ({ children }) => {
 
 
  // Deletes a transaction state using the DELETE_TRANSACTION case in the AppReducer
- function deleteTransaction(id) {
-  dispatch({
-   type: 'DELETE_TRANSACTION',
-   payload: id
-  });
+ async function deleteTransaction(id) {
+  try {
+   // dynamically dropping in the id into the mongoose delete function
+   await axios.delete(`/api/transactions/${id}`);
+   dispatch({
+    type: 'DELETE_TRANSACTION',
+    payload: id
+   });
+  } catch (err) {
+   dispatch({
+    type: 'TRANSACTION_ERROR',
+    payload: err.response.data.error
+   })
+  }  
  }
 
  // Adds a transaction state using the ADD_TRANSACTION case in the AppReducer
