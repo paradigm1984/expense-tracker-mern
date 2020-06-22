@@ -42,7 +42,6 @@ export const GlobalProvider = ({ children }) => {
   }
  }
 
-
  // Deletes a transaction state using the DELETE_TRANSACTION case in the AppReducer
  async function deleteTransaction(id) {
   try {
@@ -56,12 +55,35 @@ export const GlobalProvider = ({ children }) => {
    dispatch({
     type: 'TRANSACTION_ERROR',
     payload: err.response.data.error
-   })
+   });
   }  
  }
 
  // Adds a transaction state using the ADD_TRANSACTION case in the AppReducer
- function addTransaction(transaction) {
+ async function addTransaction(transaction) {
+  const config = {
+   headers: {
+    'Content-Type': 'application/json'
+   }
+  }
+  try {
+   const res = await axios.post('/api/transactions', transaction, config);
+   dispatch({
+    type: 'ADD_TRANSACTION',
+    payload: res.data.data
+   });
+  } catch(err) {
+   dispatch({
+    type: 'TRANSACTION_ERROR',
+    payload: err.response.data.error
+   });
+  }
+  
+
+
+
+
+
   dispatch({
    type: 'ADD_TRANSACTION',
    payload: transaction
