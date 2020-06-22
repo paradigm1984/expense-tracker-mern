@@ -1,7 +1,7 @@
-// models/index.js
+// db.config.js
 
 const mongoose = require('mongoose');
-const URI = require('../config');
+const URI = require('./credentials');
 
 mongoose.connect(process.env.MONGODB_URI || URI, {
  useNewUrlParser: true,

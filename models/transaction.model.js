@@ -9,15 +9,16 @@ var transactionSchema = new Schema({
     // `name` must be unique and of type String
     amount: {
         type: Number,
-        required: true,
+        trim: true,
+        required: [true, 'Please add a description']
     },
     description: {
          type: String,
-         required: true,
+        required: [true, 'Please add a positive or negative amount']
     },
-    date: {
+    createdAt: {
          type: Date,
-         required: true,
+         default: Date.now
     },
 },   {
         timestamps: true,

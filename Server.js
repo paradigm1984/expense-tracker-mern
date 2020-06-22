@@ -14,7 +14,7 @@ const transactionRouter = require('./routes/transaction_routes');
 require('dotenv').config();
 
 // db connection
-require('./models');
+require('./config/db.config');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
