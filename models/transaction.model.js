@@ -1,22 +1,18 @@
-// exercise.model.js
+// transaction.model.js
 
 var mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-var exerciseSchema = new Schema({
+var transactionSchema = new Schema({
     // `name` must be unique and of type String
-    username: {
-        type: String,
+    amount: {
+        type: Number,
         required: true,
     },
     description: {
          type: String,
-         required: true,
-    },
-    duration: {
-         type: Number,
          required: true,
     },
     date: {
@@ -27,7 +23,7 @@ var exerciseSchema = new Schema({
         timestamps: true,
     });
 
-const Exercise = mongoose.model('Exercise', exerciseSchema);
+const Transaction = mongoose.model('Transaction', transactionSchema);
 
-module.exports = Exercise;
+module.exports = Transaction;
   

@@ -1,6 +1,9 @@
+// server.js - root file
+
 const express = require("express");
 const dotenv = require('dotenv');
 const colors = require('colors');
+const cors = require('cors');
 const morgan = require('morgan');
 const path = require("path");
 const app = express();
