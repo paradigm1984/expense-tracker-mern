@@ -5,14 +5,20 @@ const morgan = require('morgan');
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 5000;
-const connectDB = require('./config/db')
 
-const transactions = require('./routes/transaction_routes');
+const transactionRouter = require('./routes/transaction_routes');
+
+require('dotenv').config();
+
+// db connection
+require('./models');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 
-connectDB();
-
-app.use('/api/transactions', transactions);
+app.use('/api/transactions', transactionRouter);
 
 app.get('/', (req, res) => {
  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
