@@ -1,6 +1,6 @@
 {
-  "name": "expense-tracker",
-  "version": "0.1.0",
+  "name": "expense-tracker-mern",
+  "version": "1.0.0",
   "description": "client",
   "private": true,
   "dependencies": {
@@ -8,13 +8,15 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
-    "css-loader": "^3.4.2",
+    "bootstrap": "^4.5.0",
     "http-proxy-middleware": "^1.0.3",
     "nodemon": "^2.0.3",
     "path": "^0.12.7",
     "react": "^16.13.0",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "sass": "^1.26.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,6 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "blancooo",
   "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +40,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
-

@@ -1,15 +1,24 @@
+// App.scss
+
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+$realWhite:#fff;
+$offWhite: #f7f7f7;
+$medGray: #bbb;
+$purple: #9c88ff;
+$green: #2ecc71;
+$red: #c0392b;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: $offWhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +39,7 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid $medGray;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -41,7 +50,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: $realWhite;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -65,7 +74,7 @@ h4 {
 }
 
 .money.plus {
-  color: #2ecc71;
+  color: $green;
 }
 
 .money.minus {
@@ -89,9 +98,9 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: $purple;
   box-shadow: var(--box-shadow);
-  color: #fff;
+  color: $realWhite;
   border: 0;
   display: block;
   font-size: 16px;
@@ -112,7 +121,7 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
+  background-color: $realWhite;
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
@@ -123,18 +132,18 @@ input[type='number'] {
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid $green;
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid $red;
 }
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: $red;
   border: 0;
-  color: #fff;
+  color: $realWhite;
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
@@ -150,8 +159,4 @@ input[type='number'] {
   opacity: 1;
 }
 
-@media (max-width: 320px) {
-  .container {
-    width: 300px;
-  }
-}
+
