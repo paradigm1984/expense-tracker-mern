@@ -10,5 +10,4 @@ Back End: https://www.youtube.com/watch?v=KyWaXA_NvT0
 TODO: 
 1. make the caret turn when the accordion is opened or closed
 2. clean up the add transaction form
-3. fix the bug with deleting the expenses
 4. style the navbar a bit more - add background color
