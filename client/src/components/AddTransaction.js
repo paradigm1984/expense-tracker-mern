@@ -35,7 +35,7 @@ export const AddTransaction = () => {
      <Form.Label>Amount</Form.Label>
      <Form.Control type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount" />
      <Form.Text className="text-muted">
-      (negative - expense, positive - income)
+      (negative: expense | positive: income)
      </Form.Text>
     </Form.Group>
     <Button className="submit-btn" type="submit">Add transaction</Button>
