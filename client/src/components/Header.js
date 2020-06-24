@@ -1,26 +1,23 @@
+// Header.js
+
 import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+
 import '../styles/Header.scss';
 
 export const Header = () => {
  return (
-
-
-  <nav id="navigation" className="stroke">
-   <div className="nav-header-container">
-    <h2>Expense Tracker</h2>
-   </div>
-   <ul className="nav-links">
-    <li>
-     <a href="https://github.com/paradigm1984/expense-tracker-mern">Github</a>
-     <span className="underline"></span>
-    </li>
-    <li>
-     <a href="https://danblanco.com">More Projects</a>
-     <span className="underline"></span>
-    </li>
-   </ul>
-  </nav>
-
-  
+  <div className="container">
+   <Navbar expand="sm">
+    <Navbar.Brand href="#home">Expense Tracker</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+   <Nav className="ml-auto">
+      <Nav.Link href="ttps://github.com/paradigm1984/expense-tracker-mern">Github Repo</Nav.Link>
+      <Nav.Link href="https://danblanco.com">Portfolio</Nav.Link>
+   </Nav>
+  </Navbar.Collapse>
+  </Navbar >
+  </div>
  )
 }
