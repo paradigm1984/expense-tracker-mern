@@ -1,0 +1,82 @@
+// TransactionList.scss
+
+@import 'Colors.scss';
+
+
+.history {
+ margin: 0;
+ padding: 0;
+ background-color: transparent;
+ width: 100%;
+ display: flex !important;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 1.17em;
+}
+
+.history span {
+ font-size: 1.17em;
+ color: black;
+
+}
+
+.card-header {
+ padding: 0 !important;
+}
+
+// .transaction-list-card {
+//  padding: 5px;
+//  margin: 0 auto;
+// }
+
+
+.transaction-list-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list-container li {
+  background-color: $realWhite;
+  box-shadow: var(--box-shadow);
+  color: $darkLiver;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+.transaction-list {
+  padding-left: 10px;
+}
+.transaction-list li.plus {
+  border-left: 5px solid $turqoiseGreen;
+}
+
+.transaction-list li.minus {
+  border-left: 5px solid $brightMaroon;
+}
+
+.caret-dark {
+ fill: black;
+ color: black;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: $brightMaroon;
+  border: 0;
+  color: $realWhite;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 4px 7px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-130%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-body li:hover .delete-btn {
+  opacity: 1;
+}

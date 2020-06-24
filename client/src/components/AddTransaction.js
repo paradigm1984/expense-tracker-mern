@@ -2,6 +2,9 @@
 
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import { Form, Button } from 'react-bootstrap';
+import '../styles/AddTransaction.scss';
+
 
 export const AddTransaction = () => {
  const [text, setText] = useState('');
@@ -20,23 +23,24 @@ export const AddTransaction = () => {
  }
 
  return (
-  <>
+  <div className="transaction-form-container">
    <h3>Add new transaction</h3>
-   <form onSubmit={onSubmit}>
-    <div className="form-control">
-     <label htmlFor="text">Text</label>
-                             <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
-    </div>
-    <div className="form-control">
-     <label htmlFor="amount"
-     >Amount <br />
-            (negative - expense, positive - income)</label
-     >
-     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
-    </div>
-    <button className="btn">Add transaction</button>
-   </form>
-  </>
+   <Form onSubmit={onSubmit}>
+    <Form.Group controlId="text">
+     <Form.Label>Text</Form.Label>
+     <Form.Control type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text" />
+
+    </Form.Group>
+    <Form.Group controlId="amount">
+     <Form.Label>Amount</Form.Label>
+     <Form.Control type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount" />
+     <Form.Text className="text-muted">
+      (negative - expense, positive - income)
+     </Form.Text>
+    </Form.Group>
+    <Button className="submit-btn" type="submit">Add transaction</Button>
+   </Form>
+  </div>
  )
 }
 

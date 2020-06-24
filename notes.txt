@@ -1,25 +1,14 @@
+Tutorial Videos:
+
 Front End:  https://www.youtube.com/watch?v=XuFDcZABiDQ
-
-7 min in - https://youtu.be/XuFDcZABiDQ?t=467
-
-14:18 in - https://youtu.be/XuFDcZABiDQ?t=869
-
-COMPLETE 4/10
-
-================================================================================================
-
 Back End: https://www.youtube.com/watch?v=KyWaXA_NvT0 
 
-
-https://youtu.be/KyWaXA_NvT0?t=1548 25 min in
-
-
-Heroic build pack to help launch server
-https://elements.heroku.com/buildpacks/mars/create-react-app-buildpack
+==========================================================================
 
 
 
-// ----- snippets i might need ------ //
-
-// from /client/package.json
- "http://localhost:5000",
+TODO: 
+1. make the caret turn when the accordion is opened or closed
+2. clean up the add transaction form
+3. fix the bug with deleting the expenses
+4. style the navbar a bit more - add background color

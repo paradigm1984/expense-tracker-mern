@@ -1,5 +1,8 @@
+// Balance.js
+
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import '../styles/Balance.scss';
 
 export const Balance = () => {
 
@@ -11,7 +14,7 @@ export const Balance = () => {
  // toFixed is a function for how many decimal places it goes to
  const total = amounts.reduce((accumulator, curVal) => (accumulator += curVal), 0).toFixed(2);
  return (
-  <div>
+  <div id="balance">
    <h4>Your Balance</h4>
    <h1>${total}</h1>
   </div>

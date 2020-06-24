@@ -1,20 +1,26 @@
 // App.scss
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'Colors.scss';
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-$realWhite:#fff;
-$offWhite: #f7f7f7;
-$medGray: #bbb;
-$purple: #9c88ff;
-$green: #2ecc71;
-$red: #c0392b;
+.main {
+  width: 90%;
+  max-width: 450px;
+  margin: 2.5rem auto 0 auto;
+
+
+}
 
 * {
   box-sizing: border-box;
+}
+#root {
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -28,10 +34,6 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.container {
-  margin: 30px auto;
-  width: 350px;
-}
 
 h1 {
   letter-spacing: 1px;
@@ -39,7 +41,7 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid $medGray;
+  border-bottom: 1px solid $darkLiver;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -74,11 +76,11 @@ h4 {
 }
 
 .money.plus {
-  color: $green;
+  color: $turqoiseGreen;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: $brightMaroon;
 }
 
 label {
@@ -96,67 +98,6 @@ input[type='number'] {
   width: 100%;
 }
 
-.btn {
-  cursor: pointer;
-  background-color: $purple;
-  box-shadow: var(--box-shadow);
-  color: $realWhite;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
-}
 
-.btn:focus,
-.delete-btn:focus {
-  outline: 0;
-}
-
-.list {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 40px;
-}
-
-.list li {
-  background-color: $realWhite;
-  box-shadow: var(--box-shadow);
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.list li.plus {
-  border-right: 5px solid $green;
-}
-
-.list li.minus {
-  border-right: 5px solid $red;
-}
-
-.delete-btn {
-  cursor: pointer;
-  background-color: $red;
-  border: 0;
-  color: $realWhite;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.list li:hover .delete-btn {
-  opacity: 1;
-}
 
 
