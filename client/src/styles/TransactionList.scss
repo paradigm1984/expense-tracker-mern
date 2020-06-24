@@ -6,7 +6,8 @@
 .history {
  margin: 0;
  padding: 0;
- background-color: transparent;
+ background-color: $ocean !important;
+ 
  width: 100%;
  display: flex !important;
  justify-content: space-between;
@@ -16,19 +17,12 @@
 
 .history span {
  font-size: 1.17em;
- color: black;
-
+ color: $offWhite;
 }
 
 .card-header {
  padding: 0 !important;
 }
-
-// .transaction-list-card {
-//  padding: 5px;
-//  margin: 0 auto;
-// }
-
 
 .transaction-list-container {
   list-style-type: none;
@@ -38,7 +32,6 @@
 .transaction-list-container li {
   background-color: $realWhite;
   box-shadow: var(--box-shadow);
-  color: $darkLiver;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -56,11 +49,6 @@
 
 .transaction-list li.minus {
   border-left: 5px solid $brightMaroon;
-}
-
-.caret-dark {
- fill: black;
- color: black;
 }
 
 .delete-btn {

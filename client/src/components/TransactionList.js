@@ -23,7 +23,7 @@ export const TransactionList = () => {
        <Card.Header>
          <Accordion.Toggle className="history" as={Button} variant="link" eventKey="1">
            <span>History</span>
-           <FontAwesomeIcon icon={faCaretDown} color="black" />
+           <FontAwesomeIcon icon={faCaretDown} color="white" />
          </Accordion.Toggle>
        </Card.Header>
        <div className="transaction-list-container">

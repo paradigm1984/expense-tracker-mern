@@ -9,7 +9,7 @@
 
 .submit-btn {
   cursor: pointer;
-  background-color: $lavender !important;
+  background-color: $ocean !important;
   box-shadow: var(--box-shadow);
   color: $mintCream;
   border: transparent !important;
@@ -21,6 +21,6 @@
   transition-duration: 0.3s;
 }
 .submit-btn:hover {
-  background-color: $lavenderHover !important;
+  background-color: $oceanHover !important;
   transition-duration: 0.3s;
 }
