@@ -34,7 +34,7 @@
 ## Future Enhancements / Fixes:
 #### Rotation of the caret when the accordion is opened and closed (using state).
 #### Adding loaders on the front end during the database calls
-####
+#### Fix adding a transaction on mobile - not properly reading input value
 
 
 ### Link to the live site:
