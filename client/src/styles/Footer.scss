@@ -1,0 +1,18 @@
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+
+  .copyright-link {
+   color: $ocean !important;
+   transition-duration: 0.3s;
+ }
+ .copyright-link:hover {
+   color: $oceanHover !important;
+   text-decoration: none;
+   transition-duration: 0.3s;
+ }
+}
+
