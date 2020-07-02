@@ -46,6 +46,8 @@
 
 #### Adding loaders on the front end during the database calls.
 
+#### Add the ability to edit a transaction name once submitted.
+
 #### Add a dropdown on each transaction to show the date it was added.
 
 ## Link to the live site:
