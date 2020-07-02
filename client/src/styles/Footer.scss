@@ -1,3 +1,7 @@
+// Footer.scss
+
+@import 'Colors.scss';
+
 
 footer {
   display: flex;
@@ -10,7 +14,7 @@ footer {
    transition-duration: 0.3s;
  }
  .copyright-link:hover {
-   color: $oceanHover !important;
+   color: $oceanHoverDark !important;
    text-decoration: none;
    transition-duration: 0.3s;
  }

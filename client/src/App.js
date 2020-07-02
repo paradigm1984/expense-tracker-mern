@@ -6,6 +6,7 @@ import { Balance } from './components/Balance';
 import { IncomeExpenses } from './components/IncomeExpenses';
 import { TransactionList } from './components/TransactionList';
 import { SubmitTransaction } from './components/SubmitTransaction';
+import { Footer } from './components/Footer';
 import { GlobalProvider } from './context/GlobalState';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,6 +23,7 @@ function App() {
 					<TransactionList />
 					<SubmitTransaction />
 				</div>
+				<Footer/>
 			</GlobalProvider>
 		);
 }
