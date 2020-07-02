@@ -107,3 +107,7 @@ dist
 # My notes file
 _notes.txt
 
+# My workspace
+expense-tracker.code-workspace
+
+.DS_Store

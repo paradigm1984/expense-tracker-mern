@@ -1,6 +1,5 @@
 // GlobalState.js
 
-
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';

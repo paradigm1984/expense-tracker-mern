@@ -6,7 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 import '../styles/AddTransaction.scss';
 
 
-export const AddTransaction = () => {
+AddTransaction = () => {
  const [text, setText] = useState('');
  const [amount, setAmount] = useState(0);
 

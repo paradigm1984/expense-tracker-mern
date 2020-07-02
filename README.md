@@ -48,7 +48,7 @@
 
 #### Fix adding a transaction on mobile - not properly reading input value
 
-### Link to the live site:
+## Link to the live site:
 
 https://mern-expense-report-app.herokuapp.com/
 
