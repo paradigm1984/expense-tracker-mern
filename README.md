@@ -44,9 +44,9 @@
 
 #### Rotation of the caret when the accordion is opened and closed (using state).
 
-#### Adding loaders on the front end during the database calls
+#### Adding loaders on the front end during the database calls.
 
-#### Fix adding a transaction on mobile - not properly reading input value
+#### Add a dropdown on each transaction to show the date it was added.
 
 ## Link to the live site:
 

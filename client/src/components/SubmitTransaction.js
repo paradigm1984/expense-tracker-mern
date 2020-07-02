@@ -14,10 +14,12 @@ export const SubmitTransaction = () => {
 
  const onSubmit = e => {
   e.preventDefault();
-
+  console.log("amount string: ", amount);
+  const amountInt = Number(amount);
+  console.log("amount number: ", amountInt);
   const newTransaction = {
    text,
-   amount: +amount
+   amount: +amountInt
   }
   addTransaction(newTransaction);
  }
@@ -33,7 +35,7 @@ export const SubmitTransaction = () => {
     </Form.Group>
     <Form.Group controlId="amount">
      <Form.Label>Amount</Form.Label>
-     <Form.Control type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount" />
+     <Form.Control type="text" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount" />
      <Form.Text className="text-muted">
       (negative: expense | positive: income)
      </Form.Text>
