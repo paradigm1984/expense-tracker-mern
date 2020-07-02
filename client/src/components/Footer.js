@@ -3,7 +3,7 @@
 import React from 'react';
 import '../styles/Footer.scss';
 
-const Footer = () => {
+export const Footer = () => {
 
  return (
   <footer className="page-footer font-small">
@@ -15,4 +15,3 @@ const Footer = () => {
  );
 }
 
-export default Footer;
